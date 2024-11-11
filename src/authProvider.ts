@@ -7,7 +7,7 @@ import Cookies from "js-cookie";
 export const authProvider: AuthProvider = {
   login: async ({ username, password }) => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_SIMPLE_REST_URL}users/login`, {
+      const response = await fetch(`${import.meta.env.VITE_SIMPLE_REST_URL}/users/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
