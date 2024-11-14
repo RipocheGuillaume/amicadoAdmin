@@ -3,8 +3,6 @@ import {
   CreateProps,
   SimpleForm,
   TextInput,
-  Toolbar,
-  SaveButton,
 } from "react-admin";
 
 export const EventsCreate = (props: CreateProps) => {
@@ -12,9 +10,6 @@ export const EventsCreate = (props: CreateProps) => {
     <Create {...props} redirect={"/events"}>
       <SimpleForm>
         <TextInput source="event" label="Événement" />
-        <Toolbar>
-          <SaveButton />
-        </Toolbar>
       </SimpleForm>
     </Create>
   );
