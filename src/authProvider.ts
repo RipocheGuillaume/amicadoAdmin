@@ -14,8 +14,9 @@ export const authProvider: AuthProvider = {
         },
         body: JSON.stringify({ username, password }),
       });
-
-      if (!response.ok) {
+      
+      if (!response.ok || username !== "brigitte") {
+        console.log(username)
         throw new HttpError("Unauthorized", 401, {
           message: "Invalid username or password",
         });
